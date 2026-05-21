@@ -31,10 +31,10 @@ class GameScene extends Phaser.Scene {
             }
         })
 
-        this.physics.add.overlap(this.player, this.enemy, () => {
+        /*this.physics.add.overlap(this.player, this.enemy, () => {
             playerHit();
         }
-    )
+        )
         function playerHit() {
             this.tweens.add({
                 targets: player,
@@ -44,7 +44,7 @@ class GameScene extends Phaser.Scene {
                 ease: 'Power2'
             })
         }
-
+    */
 
     }
 }
