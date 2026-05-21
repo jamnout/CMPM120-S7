@@ -9,15 +9,3 @@ let config = {
 }
 
 const game = new Phaser.Game(config)
-
-class GameScene extends Phaser.scene {
-    constructor() {
-        super('gameScene');
-    }
-    preload() {
-    }
-    create() {
-        this.add.graphics();
-        this.add.text("hello")
-    }
-}
