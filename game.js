@@ -10,7 +10,7 @@ class GameScene extends Phaser.Scene {
 
         this.tweens.add({
             targets: this.enemy,
-            duration: 3000,
+            duration: 2000,
             x: 50,
             ease: 'linear',
             loop: -1
@@ -24,12 +24,26 @@ class GameScene extends Phaser.Scene {
                     this.tweens.add({
                         targets: this.player,
                         duration: 500,
-                        y: 300,
+                        y: 350,
                         ease: 'Power2',
                         yoyo: true
                     })
             }
         })
+
+        this.physics.add.overlap(this.player, this.enemy, () => {
+            playerHit();
+        }
+    )
+        function playerHit() {
+            this.tweens.add({
+                targets: player,
+                duration: 500,
+                x: '-=100',
+                y: '+=200',
+                ease: 'Power2'
+            })
+        }
 
 
     }
