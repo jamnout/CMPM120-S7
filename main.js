@@ -1,10 +1,10 @@
 let config = {
     parent: 'phaser-game',
-    type: Phaser.WEBGL,
+    type: Phaser.AUTO,
     width: 800,
     height: 600,
     backgroundColor: 0x000000,
-    scene: [ GameScene ]
+    scene: [ Game ]
 }
 
 const game = new Phaser.Game(config)
