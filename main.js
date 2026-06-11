@@ -7,4 +7,4 @@ let config = {
     scene: [ Game ]
 }
 
-const game = new Phaser.Game(config)
+let game = new Phaser.Game(config)
